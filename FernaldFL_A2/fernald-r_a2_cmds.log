@@ -1,0 +1,36 @@
+  538  mkdir FernaldFL_A2
+  539  ls
+  540  ll
+  541  cd ..
+  542  ll
+  543  open good_luck_babe.txt 
+  544  read good_luck_babe.txt 
+  545  head good_luck_babe.txt 
+  546  mv good_luck_babe.txt mini-assignments-ryanfernald/FernaldFL_A2
+  547  ls
+  548  ll
+  549  cd mini-assignments-ryanfernald/
+  550  cd FernaldFL_A2
+  551  ls
+  552  grep -o '\bwor\w*' good_luck_babe.txt 
+  553  ls
+  557  cd FernaldFL_A2
+  558  ls -a
+  559  ll
+  560  grep -o '\b\w*dred\w\b' good_luck_babe.txt 
+  561  grep -o '\b\w*dred\w*\b' good_luck_babe.txt 
+  562  grep "Good luck, babe" good_luck_babe.txt 
+  563  grep -i "Good luck, babe" good_luck_babe.txt 
+  564  grep -n "Good luck, babe" good_luck_babe.txt 
+  565  grep -n -i "Good luck, babe" good_luck_babe.txt 
+  566  grep -n -i "Good luck, babe" good_luck_babe.txt |wc -lw good_luck_babe.txt 
+  567  wc -lw good_luck_babe.txt 
+  568  grep -n "Good luck, babe" good_luck_babe.txt |wc
+  569  grep -n "Good luck, babe" good_luck_babe.txt |wc -l
+  570  grep -n "Good luck, babe" good_luck_babe.txt |wc -w
+  571  grep -n "Good luck, babe" good_luck_babe.txt |wc
+  572  grep -n "Good luck, babe" good_luck_babe.txt |wc > fernald-r_a2_counts.txt
+  573  ls
+  574  head fernald-r_a2_counts.txt 
+  575  vi fernald-r_a2_counts.txt 
+  576  history > fernald-r_a2_cmds.log
