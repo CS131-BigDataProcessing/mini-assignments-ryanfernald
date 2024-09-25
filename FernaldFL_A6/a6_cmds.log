@@ -1,0 +1,85 @@
+  592  ls
+  593  head airline_stats.csv 
+  594  vi airline_stats.csv 
+  595  cat airline_stats.csv 
+  596  cls
+  597  head airline_stats.csv 
+  598  tail airline_stats.csv 
+  599  cls
+  600  awk '/ya/' /ect/passwd
+  601  awk '/ya/ { print $5 }' /ect/passwd
+  602  awk -F '/ya/ { print $5 }' /ect/passwd
+  603  awk '/ya/ { print $5 }' /ect/passwd
+  604  ls -a
+  605  pwd
+  606  ls
+  607  mv airline_stats.csv ..
+  608  ls
+  609  cd ..
+  610  ls
+  611  mv airline_stats.csv ..
+  612  ls
+  613  cd ..
+  614  ls
+  615  cd mini-assignments-ryanfernald/
+  616  ls
+  617  mkdir FernaldFL_A6
+  618  ls
+  619  cd ..
+  620  ls
+  621  mv airline_stats.csv mini-assignments-ryanfernald/FernaldFL_A6
+  622  cd minni-
+  623  cd mini-assignments-ryanfernald/
+  624  cd FernaldFL_A6
+  625  ls
+  626  git status
+  627  git add airline_stats.csv 
+  628  git status
+  629  cls
+  630  head airline_stats.csv 
+  631  awk -F { print $2 }' airline_stats.csv
+  632  awk -F '{ print $2 }' airline_stats.csv
+  633  awk -F, '{ print $2 }' airline_stats.csv
+  634  awk -F, '{ print $4 }' airline_stats.csv
+  635  awk -F, '{ print $4 }' airline_stats.csv | unique
+  636  awk -F, '{ print $4 }' airline_stats.csv |sort | unique
+  637  awk -F, '{ print $4 }' airline_stats.csv |sort | uniq
+  638  touch airline_inquiry.txt
+  639  vi airline_inquiry.txt
+  640  "airline"
+  641  "Alaska"
+  642  "American"
+  643  "Delta"
+  644  "Jet Blue"
+  645  "Southwest"
+  646  vi airline_inquiry.txt
+  647  ls
+  648  head airline_stats.csv 
+  649  awk -F, '$1 > 10 { print $4 }' airline_stats.csv 
+  650  awk -F, '$1 > 10 { print $4 }' airline_stats.csv | sort | uniq
+  651  awk -F, '$1 > 10 { print $4 }' airline_stats.csv | uniq
+  652  awk -F, '$1 > 10 { print $4 }' airline_stats.csv | sort | uniq
+  653  vi airline_inquiry.txt 
+  654  head airline_stats.csv 
+  655  head -n 1 airline_stats.csv 
+  656  awk -F, '$1 > 10 { print $1 }' airline_stats.csv | sort | uniq
+  657  cls
+  658  awk -F, '$1 > 10 { print $1 }' airline_stats.csv | sort | uniq
+  659  awk -F, '$1 > 10 { print $4 }' airline_stats.csv | sort | uniq
+  660  awk -F, '$1 > 10 {print $4}' airline_stats.csv | sort | uniq
+  661  awk -F, '$1 > 10 {print $4}' airline_stats.csv | sort 
+  662  awk -F, '!seen[4] ++$1 > 10 {print $4}' airline_stats.csv | sort
+  663  awk -F, '!seen[4]++ $1 > 10 {print $4}' airline_stats.csv | sort
+  664  awk -F, '!seen[$4]++ $1 > 10 {print $4}' airline_stats.csv | sort
+  665  vi airline_inquiry.txt 
+  666  threashold=15
+  667  threshold=15
+  668  awk -F, '$1 > 10 {print $4}' airline_stats.csv | sort | uniq
+  669  awk -F, '$1 > 15 {print $4}' airline_stats.csv | sort | uniq
+  670  vi airline_inquiry.txt 
+  671  vi airline_i
+  672  vi airline_inquiry.txt 
+  673  threshold=15
+  674  awk -F, -v threshold="$threshold" '$1 > threshold {print $4}' airline_stats.csv | sort |uniq
+  675  vi airline_inquiry.txt 
+  676  history > a6_cmds.log
