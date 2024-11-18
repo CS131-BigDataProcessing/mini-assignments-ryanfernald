@@ -1,0 +1,42 @@
+Extra questions: 
+
+What other types of tasks (provide 2) could benefit from automation using cron or at?
+
+	Creating Database backups, calling scripts automatically which make api requests (like fetching a stock price automatically to be added to a dataset).
+
+What potential risks are there with poorly managed automated tasks, and how can you avoid them (e.g., ensuring backups work correctly)?
+
+	Some examples of poorly automated tasks could be if we have multiple scheduled tasks that overwrite the same directory which could render one of the tasks completely uesless. One way we can avoid this is by including timestamps for filenames and periodically testing the backups which the cron tasks were creating, so if there is an unexpected list of backups created from the tasks we can know which of our scheduled tasks is causing the over writing issues.
+
+1. Setup a daily file cleanup from a directory.
+	
+	0 2 * * * rm -rf /Users/chuck/temp/*
+
+	every day at 2 am we remove all files from temp directory
+
+2. Scheduling a weekly system backup.
+	
+	0 3 * * 0 /Users/chuck/backup.sh
+
+	every week on sunday at 3am we run the backup.sh script which looks like this:
+
+	#!/bin/bash
+
+	SOURCE_DIR="/Users/chuck"
+	BACKUP_DIR="/Users/chuck/backups"
+	TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+	BACKUP_FILE="$BACKUP_DIR/backup_$TIMESTAMP.tar.gz"
+
+	mkdir -p "$BACKUP_DIR"
+
+	tar -czf "$BACKUP_FILE" "$SOURCE_DIR"
+
+	find "$BACKUP_DIR" -type f -name "*.tar.gz" -mtime +30 -exec rm {} \;
+
+	echo "Backup completed on $(date) - File: $BACKUP_FILE" >> "$BACKUP_DIR/backup.log"
+
+4. Writing a desk usage report
+
+	30 8 * * * df -h | mail -s "Daily Disk Usage Report" ryan.fernald@sjsu.edu
+
+	Every day at 8:30 am we send an email with a disk usage report

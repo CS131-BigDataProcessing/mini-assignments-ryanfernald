@@ -1,0 +1,5 @@
+0 2 * * * rm -r /Users/chuck/temp/*
+
+0 3 * * 0 /path/to/home/user/backup.sh
+
+30 8 * * * df -h | mail -s "Daily Disk Usage Report" ryan.fernald64@gmail.com
